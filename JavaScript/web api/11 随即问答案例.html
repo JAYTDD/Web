@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            margin: 50px auto;
+            display: flex;
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        .qs {
+
+            width: 450px;
+            height: 40px;
+            color: red;
+
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        .btns button {
+            width: 120px;
+            height: 35px;
+            margin: 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>随机点歌</h2>
+    <div class="box">
+        <span>歌曲是：</span>
+        <div class="qs">这里显示歌曲</div>
+    </div>
+    <div class="btns">
+        <button class="start">开始</button>
+        <button class="end">结束</button>
+    </div>
+
+    <script>
+        const arr = ['你听得到', '简单爱', '花海', '借口', '等你下课']
+        const btnstart = document.querySelector('.start')
+        const btnend = document.querySelector('.end')
+        const song = document.querySelector('.qs')
+        let s = null
+        let random = null
+        btnstart.addEventListener('click', function(){
+            s = setInterval(function (){
+                random = Math.floor(Math.random()*arr.length)
+                song.innerHTML = arr[random]
+            },100)
+        })
+
+        btnend.addEventListener('click', function(){
+            clearInterval(s)
+            if(arr.length > 0){
+                arr.splice(random,1)                 
+            }
+           
+            if(arr.length === 0){
+                btnstart.disabled = true
+                btnend.disabled = true
+                song.innerHTML = '没有歌曲了' 
+            }
+        })
+    </script>
+</body>
+
+</html>

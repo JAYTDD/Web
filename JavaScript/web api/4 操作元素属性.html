@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            img{
+                width: 300px;
+                height: 300px;
+            }
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+            .new{
+                width: 500px;
+                height: 500px;
+                background-color: orange;
+            }
+            .new1{
+                width: 50px;
+                height: 50px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1 box"></div>
+        <div class="box2 box"></div>
+        <div class="box3 box"></div>
+        <img src="./夜曲.jpg" alt="夜曲">
+        <input type="text" value="电脑">
+        <input type="checkbox" name="" id="checkbox">
+        <script>
+            //操作元素常用属性 img
+                const yequ = document.querySelector('img')
+                yequ.src = './八度空间.jpg'
+
+            //操作元素样式属性
+
+                //1.通过style方式
+                const box1 = document.querySelector('.box1')
+                box1.style.width = '300px'
+                box1.style.backgroundColor = 'red'   // 注意属性名中带-用小驼峰命名法写
+
+                //2.通过类名的方式
+                const box2 = document.querySelector('.box2')
+                box2.className = 'box2 box new'
+
+                //3.通过classList控制CSS
+                const box3 = document.querySelector('.box3')
+                box3.classList.add('new1')   //增加一个类名
+                box3.classList.remove('box')   //移除一个类名
+                //box3.classList.toggle('box1')   //替换一个类名
+            
+            //操作表单属性
+                const computer = document.querySelector('input')
+                console.log(computer.value)
+                
+                const checkbox = document.querySelector('#checkbox')
+                checkbox.checked = true
+        </script>  
+    </body>
+</html>

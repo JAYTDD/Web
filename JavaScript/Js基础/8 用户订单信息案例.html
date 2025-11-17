@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            table{
+                border-collapse: collapse;
+                height: 70px;
+                margin: 0 auto;
+            }
+            h2{
+                text-align: center;
+            }
+            th{
+                border: 1px black solid ;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>订单确认</h2>
+        <script>
+            let price=prompt('请输入商品价格')
+            let num=prompt('请输入商品数量')
+            let address=prompt('请输入收货地址')
+            let total=price*num
+
+            document.write(`
+                <table>
+                <tr>
+                    <th>商品名称</th>
+                    <th>商品价格</th>
+                    <th>商品数量</th>
+                    <th>总价</th>
+                    <th>收货地址</th>
+                </tr>
+                <tr>
+                    <th>小米手机青春plus</th>
+                    <th>${price}</th>
+                    <th>${num}</th>
+                    <th>${total}</th>
+                    <th>${address}</th>
+                </tr>
+                </table>
+            `)
+        </script>
+    </body>
+</html>

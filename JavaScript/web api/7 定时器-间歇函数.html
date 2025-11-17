@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script> 
+        //开启定时器   setInterval(函数，间隔时间)
+        setInterval(function (){
+            console.log('你好')
+        }, 1000)
+
+        //关闭定时器
+        let n = setInterval(function (){
+            console.log('你好');
+            
+        },1000)
+        clearInterval(n)
+        </script>
+    </body>
+</html>

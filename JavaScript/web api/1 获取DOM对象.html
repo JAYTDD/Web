@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="box">123</div>
+        <div class="box">abc</div>
+        <p id="nav">导航</p>
+        <ul>
+            <li>测试1</li>
+            <li>测试2</li>
+            <li>测试3</li>
+        </ul>
+        <script>
+            //通过css选择器方式
+            const box = document.querySelector('div')   //选择匹配的第一个元素
+            console.log(box)
+            
+            const nav = document.querySelector('#nav')
+            console.log(nav);
+            
+            const lis = document.querySelectorAll('ul li')
+            console.log(lis)
+        </script>
+    </body>
+</html>

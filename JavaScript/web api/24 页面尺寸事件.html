@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            div{
+                display: inline-block;
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+                background-color: pink;
+                margin: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+
+        </div>
+        <script>
+            // 浏览器窗口大小发生变化
+            window.addEventListener('resize',function(){
+                console.log('1');
+            })
+
+            //获取元素可见部分宽高 
+            //不加margin border 但是包含padding
+            const div =  document.querySelector('div')
+            console.log(div.clientWidth);
+            
+            //检查盒子的位置 相对于最近一级带定位的祖先元素
+            console.log(div.offsetLeft);
+            
+            //获取盒子的根据视口的位置 所有元素
+            console.log(div.getBoundingClientRect());
+            
+        </script>
+    </body>
+</html>

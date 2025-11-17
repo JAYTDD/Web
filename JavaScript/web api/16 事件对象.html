@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text">
+        <button>点击</button>
+        <script>
+            const btn = document.querySelector('button')
+            const input = document.querySelector('input')
+            //回调函数的第一个参数就是事件对象
+            btn.addEventListener('click',function(e){
+                console.log(e);
+                
+            })
+            //事件对象类型属性 key
+            input.addEventListener('keyup',function(e){
+                if (e.key === 'Enter') {
+                    console.log('按下回车');
+                }
+            })
+
+            
+        </script>
+    </body>
+</html>

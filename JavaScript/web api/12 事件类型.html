@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            .box{
+                width: 300px;
+                height: 300px;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <input type="text">
+        <script>
+            // 鼠标进入
+            document.querySelector('.box').addEventListener('mouseenter',function(){
+                document.querySelector('.box').style.backgroundColor = 'red'
+            })
+            // 鼠标离开
+            document.querySelector('.box').addEventListener('mouseleave',function(){
+                document.querySelector('.box').style.backgroundColor = 'orange'
+            })
+            //获得焦点
+            document.querySelector('input').addEventListener('focus', function(){
+                console.log('你好');
+                
+            })
+            //失去焦点
+            document.querySelector('input').addEventListener('blur', function(){
+                console.log('你也好');    
+            })
+            //键盘按下
+            document.querySelector('input').addEventListener('keydown', function(){
+                console.log('按下'); 
+            })
+            //键盘弹起
+            document.querySelector('input').addEventListener('keyup', function(){
+                console.log('弹起'); 
+            })
+            //用户输入文本事件
+            document.querySelector('input').addEventListener('input', function(){
+                console.log(document.querySelector('input').value);
+            })
+        </script>
+    </body>
+</html>

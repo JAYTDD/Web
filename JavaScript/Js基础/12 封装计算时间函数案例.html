@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let time = prompt('请输入秒数')
+           
+            function getTime(t) {
+                let hour = parseInt(t/60/60%24)
+                let minute = parseInt(t/60%60)
+                let second = parseInt(t%60)    
+
+                hour = hour < 10 ? '0'+hour : hour 
+                minute = minute < 10 ? '0'+minute : minute 
+                second = second < 10 ? '0'+second : second 
+
+                document.write(`${hour}.${minute}.${second}`)
+            }
+
+            getTime(time)
+        </script>
+    </body>
+</html>
