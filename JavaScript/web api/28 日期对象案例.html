@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            div{
+                border: 1px black solid;
+            }
+        </style>
+    </head>
+    <body>
+    <div></div>
+    <script>
+        const div = document.querySelector('div')
+            function getDate() {
+                const date = new Date()
+                
+                let h = date.getHours()
+                h = h < 10 ? '0'+ h : h
+
+                let s = date.getSeconds()
+                s = s < 10 ? '0'+ s : s
+
+                let m = date.getMinutes()
+                m = m < 10 ? '0'+ m : m
+                
+                
+                return `今天是:${date.getFullYear()}年${date.getMonth() + 1}月
+                ${date.getDate()}号${h}:${m}:${s}`
+            }
+            div.innerHTML = getDate()
+        </script>
+    </body>
+</html>
