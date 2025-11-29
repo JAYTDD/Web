@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="grandfather">
+            <div class="dad">
+                <div class="son"></div>
+            </div>
+        </div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+        <script>
+            //获得父节点  
+            const son = document.querySelector('.son')
+            console.log(son.parentNode)
+            console.log(son.parentNode.parentNode)
+
+            //获得子节点
+            const ul = document.querySelector('ul')
+            console.log(ul.children)   
+            
+            //获得兄弟节点
+            const li = document.querySelector('li')
+            console.log(li.nextElementSibling)      //下一个兄弟节点
+            console.log(li.previousElementSibling)      //上一个兄弟节点    
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .countdown {
+      width: 240px;
+      height: 305px;
+      text-align: center;
+      line-height: 1;
+      color: #fff;
+      background-color: brown;
+      /* background-size: 240px; */
+      /* float: left; */
+      overflow: hidden;
+    }
+
+    .countdown .next {
+      font-size: 16px;
+      margin: 25px 0 14px;
+    }
+
+    .countdown .title {
+      font-size: 33px;
+    }
+
+    .countdown .tips {
+      margin-top: 80px;
+      font-size: 23px;
+    }
+
+    .countdown small {
+      font-size: 17px;
+    }
+
+    .countdown .clock {
+      width: 142px;
+      margin: 18px auto 0;
+      overflow: hidden;
+    }
+
+    .countdown .clock span,
+    .countdown .clock i {
+      display: block;
+      text-align: center;
+      line-height: 34px;
+      font-size: 23px;
+      float: left;
+    }
+
+    .countdown .clock span {
+      width: 34px;
+      height: 34px;
+      border-radius: 2px;
+      background-color: #303430;
+    }
+
+    .countdown .clock i {
+      width: 20px;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="countdown">
+    <p class="next">今天是2025年11月24日</p>
+    <p class="title">上课倒计时</p>
+    <p class="clock">
+      <span id="hour">00</span>
+      <i>:</i>
+      <span id="minutes">25</span>
+      <i>:</i>
+      <span id="second">20</span>
+    </p>
+    <p class="tips">18:30:00上课</p>
+  </div>
+  <script>
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    function updateTime(){
+        const now = +new Date()
+        const future = +new Date('2025-11-24 18:30:00')
+        const diff = (future - now)/1000  //秒数差值
+        let hours = parseInt(diff/60/60/24)  //小时数
+        hours = hours<10?'0'+hours:hours
+        let minutes = parseInt(diff/60%60)  //分钟数
+        minutes = minutes<10?'0'+minutes:minutes
+        let seconds = parseInt(diff%60)      //秒数
+        seconds = seconds<10?'0'+seconds:seconds
+
+        document.getElementById('hour').innerHTML = hours;
+        document.getElementById('minutes').innerHTML = minutes;
+        document.getElementById('second').innerHTML = seconds;
+        const countdownDiv = document.querySelector('.countdown');
+        countdownDiv.style.backgroundColor = getRandomColor();
+    }
+    updateTime()
+    setInterval(updateTime,1000)
+    
+    
+  </script>
+</body>
+
+</html>

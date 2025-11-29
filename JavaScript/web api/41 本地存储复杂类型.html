@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //把复杂数据类型转换成JSON字符串进行存储
+            const obj = {
+                name: 'JAY',
+                age: 18,
+                gender: '男'
+            }
+
+            localStorage.setItem('obj', JSON.stringify(obj))
+
+            console.log(localStorage.getItem('obj'));
+            
+            //把JSON字符串转换成对象进行使用
+            console.log(JSON.parse(localStorage.getItem('obj')));
+            
+
+
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //存储数据  只能存储字符串类型
+            localStorage.setItem('uname','JAY')
+
+            //读取数据
+            const name = localStorage.getItem('uname')
+            console.log(name);
+            
+            //删除数据  只删除名字
+            //localStorage.removeItem('uname')
+
+            //修改数据
+            localStorage.setItem('uname','周杰伦')
+
+            console.log(localStorage.getItem('uname'));
+            
+            //sessionStorage()  用法一样 但是关闭浏览器就会消失
+
+
+
+
+        </script>
+    </body>
+</html>

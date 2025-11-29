@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //计算倒计时效果
+            //将来的毫秒数减去现在的毫秒数
+            //1.getTime() 可以返回是指定的毫秒数
+            const date =new Date()
+            console.log(date.getTime());
+ 
+            //2.+new Date()  无需实例化  可以返回指定的毫秒数
+            console.log(+new Date());
+
+            //3.Date.now()   无需实例化
+            console.log(Date.now());
+        </script>
+    </body>
+</html>

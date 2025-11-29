@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <script>
+            //创建元素节点
+            const ul = document.querySelector('ul')
+            const li = document.createElement('li')
+            li.innerHTML = '我是新创建的li节点'
+
+            //追加元素节点  插入到父元素的最后面
+            ul.appendChild(li)
+
+            //追加元素节点 插入到指定元素前面
+             const li1 = document.createElement('li')
+             li1.innerHTML = '我是插入到第一个位置的li节点'
+             ul.insertBefore(li1, ul.children[0])
+
+             //克隆节点
+            ul.appendChild(ul.children[0].cloneNode(true)) 
+
+        </script>
+    </body>
+</html>

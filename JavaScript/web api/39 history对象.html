@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <button class="back">后退</button>
+        <button class="forword">前进</button>
+
+        <script>
+            const back = document.querySelector('.back')
+            const forword = document.querySelector('.forword')
+            back.addEventListener('click',function () {
+                //history.back()
+                history.go(-1)
+            })
+            forword.addEventListener('click',function () {
+                //history.back()
+                history.go(1)
+            })
+        </script>
+    </body>
+</html>
