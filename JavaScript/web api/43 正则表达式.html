@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //检查的字符串
+            const str = '我们在学前端，希望我们学习前端高薪'
+
+            //定义
+            const qian = /前端/
+
+            //检查
+            console.log(qian.test(str));    //返回ture
+            
+            console.log(qian.exec(str));    //返回数组
+            
+            // 替换和修饰符
+            const str1 = '欢迎大家学习前端，相信大家一定能学好前端，都成为前端大神'
+
+            // const strEnd = str.replace(/前端/, 'web') 只能替换一个
+
+            // 2. 修饰符 g 全部替换
+            const strEnd = str1.replace(/前端/g, 'web')
+
+            //  i 是单词 ignore 的缩写，正则匹配时字母不区分大小写
+            //  g 是单词 global 的缩写，匹配所有满足正则表达式的结果
+
+        </script>
+    </body>
+</html>
