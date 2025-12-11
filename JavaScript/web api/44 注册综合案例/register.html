@@ -304,12 +304,18 @@
     })
 
     //提交按钮
-    const form = document.querySelector('.xtx-form')
+    const form = document.querySelector('form')
     form.addEventListener('submit',function(e){
-      e.preventDefault()
-      if(queren.classList.contains(icon-queren)){
+      if(!verifyName())e.preventDefault()
+      if(!verifyPhone())e.preventDefault()
+      if(!verifyPassword())e.preventDefault()
+      if(!verifyConfirm())e.preventDefault()
+      if(!verifyCode())e.preventDefault()
+        
+      
+      if(queren.classList.contains('icon-queren')){
         alert('请同意用户服务协议')
-        return
+        e.preventDefault()
       }
     })
 

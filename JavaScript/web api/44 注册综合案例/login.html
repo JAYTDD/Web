@@ -77,8 +77,37 @@
     </div>
   </div>
   <script>
+    //tab切换
+    const tab_nav = document.querySelector('.tab-nav')
+    const pane = document.querySelectorAll('.tab-pane')
+    tab_nav.addEventListener('click',function(e){
+      if(e.target.tagName === 'A'){
+        document.querySelector('.tab-nav .active').classList.remove('active')
+        e.target.classList.add('active')
+        for(let i=0;i<pane.length;i++){
+          pane[i].style.display = 'none'
+        }
+        pane[e.target.dataset.id].style.display = 'block'
+      }
+    })  
 
+    //提交表单验证
+    const form = document.querySelector('form')
+    const agree = document.querySelector('[name=agree]')
+    const username = document.querySelector(['[name=username]'])
+
+    form.addEventListener('submit',function(e){
+      e.preventDefault()
+      if (!agree.checked) {
+        return alert('请同意用户服务协议')
+      }
+
+      //将数据存储到本地存储中
+      localStorage.setItem('username',username.value)
+
+      //跳转首页
+      location.href = './index.html'
+    })
   </script>
 </body>
-
 </html>

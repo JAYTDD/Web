@@ -1219,8 +1219,25 @@
   </div>
 
   <script>
+    const firstLi = document.querySelector('.xtx_navs li:first-child')
+    const secondLi = document.querySelector('.xtx_navs li:nth-child(2)')
+    function render() {
+      const name = localStorage.getItem('username')
+      if(name){
+        firstLi.innerHTML = `<a href="javascript:;"><i class="iconfont icon-user">欢迎${name}</i></a>`
+        secondLi.innerHTML = '<a href="javascript:; ">退出登录</a>'
+      } else {
+        firstLi.innerHTML = '<a href="login.html">请先登录</a>'
+        secondLi.innerHTML = '<a href="register.html">免费注册</a>'
+      }
+    }
+    render()
 
-
+    secondLi.addEventListener('click',function(){
+      localStorage.removeItem('username')
+      render()
+      
+    })
   </script>
 </body>
 
