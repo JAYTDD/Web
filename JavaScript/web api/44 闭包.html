@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function outer(){
+                let i = 0
+                function inner() {
+                    i++
+                    console.log(`函数被调用${i}次`);
+                }
+                return inner
+            }
+
+            const fun = outer()
+            
+        </script>
+    </body>
+</html>

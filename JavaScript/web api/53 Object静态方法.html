@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //返回的是数组
+            const o = {uname: 'JAY', song: '晴天'}
+            //获取所有属性名
+            console.log(Object.keys(o))
+            //获取所有的属性值
+            console.log(Object.values(o))
+            
+            const oo = {}
+            Object.assign(oo,o)  //对象的拷贝
+            console.log(oo);
+            
+        </script>
+    </body>
+</html>

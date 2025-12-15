@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // const obj = {
+            //     name: 'JAY',
+            //     song: '晴天'
+            // } 
+            // const name = 'GEM'
+            // const {name , song} = obj  //属性名和变量名相同
+            // console.log(name);
+            // console.log(song);
+            
+            // const {name: name1 , song} = obj  //属性名已经有声明 重新命名
+            // console.log(name1)
+            // console.log(song)
+
+
+            const pig = {
+                name : '佩奇',
+                age : 6
+            }
+            const goods = [
+                {
+                    goodsName : '小米',
+                    price : 1999
+                }
+            ]
+            const {name , age : age1 } = pig
+            console.log(name)
+            console.log(age1)
+
+            const {name : uname, age : age2} = pig
+            console.log(uname)
+            console.log(age2)
+
+            const[{goodsName , price}] = goods
+            console.log(goodsName)
+            console.log(price)
+            
+        </script>
+    </body>
+</html>

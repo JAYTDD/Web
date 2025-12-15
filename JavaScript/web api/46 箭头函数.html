@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //箭头函数只能使用剩余参数 ...a
+            const fn = (a) =>{
+                console.log(a);
+                
+            }
+
+            //只有一个形参
+            const fn1 = a =>{
+                console.log(a);
+            }
+            
+            //省略花括号
+            const fn2 = a => console.log(a)
+
+            //省略return
+            const fn3 = a => a + a
+
+
+            fn(1)
+
+
+            //箭头函数中的this 指向上一层作用域链的this
+        </script>
+    </body>
+</html>

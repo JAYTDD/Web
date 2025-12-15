@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const arr = [1, 2, 3]
+            //没有初始值
+            const result = arr.reduce(function (prev, current) {
+                return prev + current  //求和
+            })
+            console.log(result)
+            
+            //有初始值
+            const total = arr.reduce(function (prev, current) {
+                return prev + current
+            },10)  //10为初始值
+            console.log(total)
+            
+        </script>
+    </body>
+</html>

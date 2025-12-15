@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function getSum() { 
+                let sum = 0
+                //arguments 是伪数组 包含所有调用函数时传入的实参
+                for (let i = 0; i < arguments.length; i++) {
+                   
+                    sum += arguments[i]   
+                }
+                console.log(sum)
+            }
+
+            getSum(1,1,2,3,1)
+
+
+            //剩余参数
+            function getSum1(...a){
+                console.log(a)
+                console.log(...a);
+                
+            }
+
+            getSum1(1,2)
+        </script>
+    </body>
+</html>
