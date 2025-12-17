@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const arr = [1, 2, 3] 
+            Array.prototype.max = function () {
+                return Math.max(...this)
+                
+            }
+            Array.prototype.min = function () {
+                return Math.min(...this)
+
+            }
+            Array.prototype.sum = function () {
+                return this.reduce((pre, now) => pre + now, 0)
+
+            }
+
+            console.log(arr.max())
+            console.log(arr.min())
+            console.log(arr.sum())
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //构造方法
+            function Songer(name, song) {
+                this.name = name 
+                this.song = song   
+            }
+
+            //公用的方法写在原型对象身上
+            Songer.prototype.sing = function sing() {
+                console.log('唱歌')
+            }
+
+            //调用的是一个函数 无需再创一个一模一样的
+            const JAY = new Songer ()
+            const GEM = new Songer ()
+
+            JAY.sing()
+            GEM.sing()
+
+            console.log(Songer.prototype.constructor === Songer)  //constructor指回构造函数
+            console.log(JAY.__proto__) //实例对象的属性 指向原型对象
+            
+        </script>
+    </body>
+</html>
