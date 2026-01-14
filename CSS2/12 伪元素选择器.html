@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>伪元素选择器</title>
+        <style>
+            div::first-letter{
+                color: red;
+                font-size: 30px;
+            }
+            div::first-line{
+                color: red;
+                background-color: yellow;
+            }
+            div::selection{
+                color: purple;
+            }
+            input::placeholder{
+                color: aqua;
+            }
+            p::before{
+                content: "￥";
+            }
+            p::after{
+                content: ".00";
+            }
+        </style>
+    </head>
+    <body>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem labore illum harum ut quaerat provident tempore dolores alias, quibusdam facere soluta molestias fugiat dolorem numquam impedit modi minus iusto nihil suscipit. Amet at debitis aperiam minima iure quaerat assumenda esse officiis possimus, unde fugit excepturi pariatur consequatur enim. Expedita quis, eum dignissimos saepe commodi repellat tempora! Itaque neque aut unde.</div>
+        <input type="text" placeholder="请输入用户名">
+        <p>199</p>
+        <p>299</p>
+        <p>399</p>
+        <p>499</p>
+    </body>
+</html>

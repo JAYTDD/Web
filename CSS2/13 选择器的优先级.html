@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>选择器的优先级</title>
+        <style>
+            #wang{
+                color: orange;
+            }
+            .container span.slogan{
+                color: blue;
+            }
+            div>p>span:nth-child(1){
+                color: red;
+            }
+            .slogn{
+                color: purple !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  !important > 行内样式 > ID选择器 > 类选择器 > 元素选择器 > 通配选择器 > 继承的样式 -->
+        <div class="container">
+            <p>
+                <span class="slogn" id="wang">王力宏</span>
+                <span>邓紫棋</span>
+            </p>
+        </div>
+    </body>
+</html>

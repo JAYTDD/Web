@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 id="title">个人信息表单</h1>
+        <p id="description">请认真填写</p>
+        <form action="" id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input id="name" type="text" placeholder="请输入姓名"><br> 
+        <label for="email" id="email-label">Email</label>
+        <input id="email" type="email" placeholder="请输入邮箱"><br>
+        <label for="number" id="number-label">Age(option)</label>
+        <input type="number" id="number" min="3" max="7" placeholder="年龄"><br>
+        籍贯：
+        <select name="dropdown" id="dropdown">
+            <option value="">广东省</option>
+            <option value="">湖南省</option>
+        </select><br>
+        性别：
+        男<input type="radio" name="gender" value="male">
+        女<input type="radio" name="gender" value="formale"><br>
+        爱好：
+        打篮球<input type="checkbox" value="hobbit" >
+        打羽毛球<input type="checkbox" value="hobbit" ><br>
+        <textarea name="" id=""></textarea><br>
+        <input type="submit" id="submit">
+      </form>
+    </body>
+</html>

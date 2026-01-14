@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>伪类选择器</title>
+    <style>
+        /* 选中没有被访问过的超链接 */
+        a:link{
+            color: orange;
+        }        
+        /* 选中访问过的超链接 */
+        a:visited{
+            color: blue;
+        }
+        /* 选中鼠标悬浮状态的超链接 */
+        a:hover{
+            color: red;
+        }
+        /* 点击状态 */
+        a:active{
+            color: purple;
+        }
+        input:focus{
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+    </head>
+    <body>
+        <a href="https://www.bilibili.com" target="_blank">去哔哩哔哩</a>
+        <a href="https://www.jd.com" target="_blank">去京东</a>
+        <br>
+        <input type="text">
+        <br>
+        <input type="text">
+        <br>
+        <input type="text">
+        <br>
+
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>表格相关属性</title>
+        <style>
+            /* 边框属性 */
+            table {
+                width: 500px;
+                /* border-width: 3px;
+                border-color: skyblue;
+                border-style: solid; */
+                border: 3px skyblue solid;
+                /* 控制列表列宽 */
+                table-layout: fixed;
+                /* 单元格间距 */
+                border-spacing: 0px;
+                /* 合并单元格边框 */
+                border-collapse: collapse;
+                /* 隐藏没有内容的单元格 */
+                empty-cells: hide;
+                /* 设置表格标题位置 */
+                caption-side: top;
+            }
+            td,th {
+                border: 1px skyblue solid;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption> 人员信息</caption>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>18</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>19</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>王五</td>
+                    <td>20</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>赵六</td>
+                    <td>21</td>
+                    <td>男</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

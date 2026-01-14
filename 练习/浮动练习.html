@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>浮动练习</title>
+        <style>
+            .clearfix::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .container{
+                margin: 0 auto;
+                width: 960px;
+                text-align: center;
+            }
+            .logo{
+                width: 200px;
+                float: left;
+            }
+            .banner1{
+                width: 540px;
+                float: left;
+                margin: 0 10px;
+            }
+            .banner2{
+                width: 200px;
+                float: left;
+            }
+            .banner1,.banner2,.logo{
+                height: 80px;
+                line-height: 80px;
+                background-color: gray;
+                
+            }
+            .menu{
+                background-color: gray;
+                margin-top: 10px;
+                height: 30px;
+                line-height: 30px;
+            }
+            .left-content{
+                float: left;
+            }
+            .left-content{
+                float: left;
+            }
+            .right-content{
+                float: left;
+            }
+            .content1,.content2{
+                width: 368px;
+                height: 198px;
+                line-height: 198px;
+                border: 1px black solid;
+                margin-right: 10px;
+                float: left;
+            }
+            .top{
+                margin-top: 10px;
+            }
+            .bottom{
+                margin-top: 10px;
+            }
+            .content3,.content4,.content5,.content6{
+                height: 198px;
+                line-height: 198px;
+                width: 178px;
+                border: 1px black solid;
+                margin-right: 10px;
+                float: left;
+            }
+            .content7,.content8,.content9{
+                border: 1px black solid;
+                width: 198px;
+                height: 128px;
+                line-height: 128px;
+                margin-top: 10px;
+            }
+            .foot{
+                background-color: gray;
+                height: 60px;
+                line-height: 60px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="head clearfix">
+                <div class="logo">logo</div>
+                <div class="banner1">banner1</div>
+                <div class="banner2">banner2</div>
+            </div>
+            <div class="menu">菜单</div>
+            <div class="content clearfix">
+                <div class="left-content">
+                    <div class="top clearfix">
+                        <div class="content1">栏目一</div>
+                        <div class="content2">栏目二</div>
+                    </div>
+                    <div class="bottom clearfix">
+                        <div class="content3">栏目三</div>
+                        <div class="content4">栏目四</div>
+                        <div class="content5">栏目五</div>
+                        <div class="content6">栏目六</div>
+                    </div>
+                </div>
+                <div class="right-content clearfix">
+                    <div class="content7">栏目七</div>
+                    <div class="content8">栏目八</div>
+                    <div class="content9">栏目九</div>
+                </div>
+            </div>
+            <div class="foot">页脚</div>
+        </div> 
+    </body>
+</html>

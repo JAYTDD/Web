@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>否定伪类</title>
+        <style>
+        /* div>p:not(.david) {
+            color: red;
+        }*/
+        
+        div>p:not(:first-child){
+            color: red;
+        }
+        </style> 
+    </head>
+    <body>
+        <div>
+        <p>八度空间</p>
+        <p>七里香</p>
+        <p>Jay</p>
+        <p>叶惠美</p>
+        <p class="david" >I'm OK</p>
+        <p class="david" >太平盛世</p>
+        </div>
+    </body>
+</html>
